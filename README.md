@@ -10,8 +10,8 @@ This application can be accessed by opening the index.html file that is located 
 
 ## Usage
 
-Hourly Schedule <br>
-<img src="https://github.com/EricKim86/video-game-quiz/blob/main/assets/images/scheduler.png?raw=true" width="600"/><br/>
+Hourly Schedule: <br>
+<img src="https://github.com/EricKim86/work-day-schedule/blob/main/Assets/images/scheduler.png?raw=true" width="600"/><br/>
 
 ## Credits
 
