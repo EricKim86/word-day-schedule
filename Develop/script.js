@@ -1,57 +1,73 @@
 $(function () {
+
+//add numeric value class to each hour id
+$(".container-lg").children().eq(5).addClass("9");
+var add14 = ("9");
+
+$(".container-lg").children().eq(5).addClass("10");
+var add14 = ("10");
+
+$(".container-lg").children().eq(5).addClass("11");
+var add14 = ("11");
+
+$(".container-lg").children().eq(5).addClass("12");
+var add14 = ("12");
+
+$(".container-lg").children().eq(5).addClass("13");
+var add14 = ("13");
+
+$(".container-lg").children().eq(5).addClass("14");
+var add14 = ("14");
+
+$(".container-lg").children().eq(5).addClass("15");
+var add14 = ("15");
+
+$(".container-lg").children().eq(5).addClass("16");
+var add14 = ("16");
+
+$(".container-lg").children().eq(5).addClass("17");
+var add14 = ("17");
+
+
 //save to local storage
+    var hour9Recall = JSON.parse(localStorage.getItem("hour-9"));
+    if (hour9Recall !== null) {
+      $("#hour-9").children().eq(1).append(hour9Recall);
+    }
+    var hour10Recall = JSON.parse(localStorage.getItem("hour-10"));
+    if (hour10Recall !== null) {
+      $("#hour-10").children().eq(1).append(hour10Recall);
+    }
+    var hour11Recall = JSON.parse(localStorage.getItem("hour-11"));
+    if (hour10Recall !== null) {
+      $("#hour-11").children().eq(1).append(hour11Recall);
+    }
+    var hour12Recall = JSON.parse(localStorage.getItem("hour-12"));
+    if (hour12Recall !== null) {
+      $("#hour-12").children().eq(1).append(hour12Recall);
+    }
+    var hour13Recall = JSON.parse(localStorage.getItem("hour-13"));
+    if (hour13Recall !== null) {
+      $("#hour-13").children().eq(1).append(hour13Recall);
+    }
+    var hour14Recall = JSON.parse(localStorage.getItem("hour-14"));
+    if (hour14Recall !== null) {
+      $("#hour-14").children().eq(1).append(hour14Recall);
+    }
+    var hour15Recall = JSON.parse(localStorage.getItem("hour-15"));
+    if (hour14Recall !== null) {
+      $("#hour-15").children().eq(1).append(hour15Recall);
+    }
+    var hour16Recall = JSON.parse(localStorage.getItem("hour-16"));
+    if (hour16Recall !== null) {
+      $("#hour-16").children().eq(1).append(hour16Recall);
+    }
 
-  var hour9Recall = JSON.parse(localStorage.getItem("hour-9"));
-  if (hour9Recall !== null) {
-    $("#hour-9").children().eq(1).append(hour9Recall);
-  }
+    var hour17Recall = JSON.parse(localStorage.getItem("hour-17"));
+    if (hour17Recall !== null) {
+      $("#hour-17").children().eq(1).append(hour17Recall);
+    }
 
-  var hour10Recall = JSON.parse(localStorage.getItem("hour-10"));
-  if (hour10Recall !== null) {
-    $("#hour-10").children().eq(1).append(hour10Recall);
-  }
-
-  var hour11Recall = JSON.parse(localStorage.getItem("hour-11"));
-  if (hour10Recall !== null) {
-    $("#hour-11").children().eq(1).append(hour11Recall);
-  }
-
-  var hour12Recall = JSON.parse(localStorage.getItem("hour-12"));
-  if (hour12Recall !== null) {
-    $("#hour-12").children().eq(1).append(hour12Recall);
-  }
-
-  var hour13Recall = JSON.parse(localStorage.getItem("hour-13"));
-  if (hour13Recall !== null) {
-    $("#hour-13").children().eq(1).append(hour13Recall);
-  }
-
-  var hour14Recall = JSON.parse(localStorage.getItem("hour-14"));
-  if (hour14Recall !== null) {
-    $("#hour-14").children().eq(1).append(hour14Recall);
-  }
-
-  var hour15Recall = JSON.parse(localStorage.getItem("hour-15"));
-  if (hour14Recall !== null) {
-    $("#hour-15").children().eq(1).append(hour15Recall);
-  }
-
-  var hour16Recall = JSON.parse(localStorage.getItem("hour-16"));
-  if (hour16Recall !== null) {
-    $("#hour-16").children().eq(1).append(hour16Recall);
-  }
-
-  
-  var hour17Recall = JSON.parse(localStorage.getItem("hour-17"));
-  if (hour17Recall !== null) {
-    $("#hour-17").children().eq(1).append(hour17Recall);
-  }
-  
-  // TODO: Add code to apply the past, present, or future class to each time
-  // block by comparing the id to the current hour. HINTS: How can the id
-  // attribute of each time-block be used to conditionally add or remove the
-  // past, present, and future classes? How can Day.js be used to get the
-  // current hour in 24-hour time?
   
   //pull entries from local storage and display in index
   function run() {
@@ -83,12 +99,29 @@ $(function () {
     localStorage.setItem("hour-17", JSON.stringify(hour17));
   
   }
+
+  // TODO: Add code to apply the past, present, or future class to each time
+  // block by comparing the id to the current hour. HINTS: How can the id
+  // attribute of each time-block be used to conditionally add or remove the
+  // past, present, and future classes? How can Day.js be used to get the
+  // current hour in 24-hour time?
+
+
+//if "time" is greater than #hour = add class past
+//if "time" is less than #hour = add class future 
   
 //display date in index
 var date = dayjs();
 $("#currentDay").text(date.format("dddd, MMMM, D"));
 
-var time = new Date($.now());
+//set current hour
+var time = JSON.stringify(dayjs().hour());
+
+
+//if "time" equals #hour = add class present
+if (add14 === time) {
+  $("#hour-14").addClass("present")
+};
 
 //press button to save
 ($(".container-lg").children().eq(0).children().eq(2)).on("click", run);
