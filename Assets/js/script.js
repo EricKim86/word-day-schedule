@@ -80,11 +80,11 @@ console.log(time);
 
 //determine which class (past, present, future) class to add based on if the current hour matches the hour in the index
 
-if ("10" === time) {
+if ("9" === time) {
   $("#hour-9").addClass("present")
-} else if ("10" < time) {
+} else if ("9" < time) {
   $("#hour-9").addClass("past")
-} else if ("10" > time) {
+} else if ("9" > time) {
   $("#hour-9").addClass("future")
 };
 
