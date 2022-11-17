@@ -1,34 +1,5 @@
 $(function () {
 
-//add numeric value class to each hour id
-$(".container-lg").children().eq(5).addClass("9");
-var add14 = ("9");
-
-$(".container-lg").children().eq(5).addClass("10");
-var add14 = ("10");
-
-$(".container-lg").children().eq(5).addClass("11");
-var add14 = ("11");
-
-$(".container-lg").children().eq(5).addClass("12");
-var add14 = ("12");
-
-$(".container-lg").children().eq(5).addClass("13");
-var add14 = ("13");
-
-$(".container-lg").children().eq(5).addClass("14");
-var add14 = ("14");
-
-$(".container-lg").children().eq(5).addClass("15");
-var add14 = ("15");
-
-$(".container-lg").children().eq(5).addClass("16");
-var add14 = ("16");
-
-$(".container-lg").children().eq(5).addClass("17");
-var add14 = ("17");
-
-
 //save to local storage
     var hour9Recall = JSON.parse(localStorage.getItem("hour-9"));
     if (hour9Recall !== null) {
@@ -62,7 +33,6 @@ var add14 = ("17");
     if (hour16Recall !== null) {
       $("#hour-16").children().eq(1).append(hour16Recall);
     }
-
     var hour17Recall = JSON.parse(localStorage.getItem("hour-17"));
     if (hour17Recall !== null) {
       $("#hour-17").children().eq(1).append(hour17Recall);
@@ -99,16 +69,6 @@ var add14 = ("17");
     localStorage.setItem("hour-17", JSON.stringify(hour17));
   
   }
-
-  // TODO: Add code to apply the past, present, or future class to each time
-  // block by comparing the id to the current hour. HINTS: How can the id
-  // attribute of each time-block be used to conditionally add or remove the
-  // past, present, and future classes? How can Day.js be used to get the
-  // current hour in 24-hour time?
-
-
-//if "time" is greater than #hour = add class past
-//if "time" is less than #hour = add class future 
   
 //display date in index
 var date = dayjs();
@@ -116,12 +76,82 @@ $("#currentDay").text(date.format("dddd, MMMM, D"));
 
 //set current hour
 var time = JSON.stringify(dayjs().hour());
+console.log(time);
 
+//determine which class (past, present, future) class to add based on if the current hour matches the hour in the index
 
-//if "time" equals #hour = add class present
-if (add14 === time) {
-  $("#hour-14").addClass("present")
+if ("9" === time) {
+  $("#hour-9").addClass("present")
+} else if ("9" < time) {
+  $("#hour-9").addClass("past")
+} else if ("9" > time) {
+  $("#hour-9").addClass("future")
 };
+
+if ("10" === time) {
+  $("#hour-10").addClass("present")
+} else if ("10" < time) {
+  $("#hour-10").addClass("past")
+} else if ("10" > time) {
+  $("#hour-10").addClass("future")
+};
+
+if ("11" === time) {
+  $("#hour-11").addClass("present")
+} else if ("11" < time) {
+  $("#hour-11").addClass("past")
+} else if ("11" > time) {
+  $("#hour-11").addClass("future")
+};
+
+if ("12" === time) {
+  $("#hour-12").addClass("present")
+} else if ("12" < time) {
+  $("#hour-12").addClass("past")
+} else if ("12" > time) {
+  $("#hour-12").addClass("future")
+};
+
+if ("13" === time) {
+  $("#hour-13").addClass("present")
+} else if ("13" < time) {
+  $("#hour-13").addClass("past")
+} else if ("13" > time) {
+  $("#hour-13").addClass("future")
+};
+
+if ("14" === time) {
+  $("#hour-14").addClass("present")
+} else if ("14" < time) {
+  $("#hour-14").addClass("past")
+} else if ("14" > time) {
+  $("#hour-14").addClass("future")
+};
+
+if ("15" === time) {
+  $("#hour-15").addClass("present")
+} else if ("15" < time) {
+  $("#hour-15").addClass("past")
+} else if ("15" > time) {
+  $("#hour-15").addClass("future")
+};
+
+if ("16" === time) {
+  $("#hour-16").addClass("present")
+} else if ("16" < time) {
+  $("#hour-16").addClass("past")
+} else if ("16" > time) {
+  $("#hour-16").addClass("future")
+};
+
+if ("17" === time) {
+  $("#hour-17").addClass("present")
+} else if ("17" < time) {
+  $("#hour-17").addClass("past")
+} else if ("17" > time) {
+  $("#hour-17").addClass("future")
+};
+
 
 //press button to save
 ($(".container-lg").children().eq(0).children().eq(2)).on("click", run);
@@ -132,6 +162,5 @@ if (add14 === time) {
 ($(".container-lg").children().eq(6).children().eq(2)).on("click", run);
 ($(".container-lg").children().eq(7).children().eq(2)).on("click", run);
 ($(".container-lg").children().eq(8).children().eq(2)).on("click", run);
-($(".container-lg").children().eq(9).children().eq(2)).on("click", run);
 
 });
