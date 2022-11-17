@@ -1,4 +1,4 @@
-# <Video-Game-Quiz>
+# work-day-schedule
 
 ## Description
 
@@ -11,7 +11,7 @@ This application can be accessed by opening the index.html file that is located 
 ## Usage
 
 Hourly Schedule <br>
-<img src="https://github.com/EricKim86/video-game-quiz/blob/main/assets/images/quiz1.png?raw=true" width="600"/><br/>
+<img src="https://github.com/EricKim86/video-game-quiz/blob/main/assets/images/scheduler.png?raw=true" width="600"/><br/>
 
 ## Credits
 
