@@ -1,6 +1,7 @@
 $(function () {
 
 //save to local storage
+
     var hour9Recall = JSON.parse(localStorage.getItem("hour-9"));
     if (hour9Recall !== null) {
       $("#hour-9").children().eq(1).append(hour9Recall);
@@ -40,6 +41,8 @@ $(function () {
 
   
   //pull entries from local storage and display in index
+
+
   function run() {
     var hour9 = $("#hour-9").children().eq(1).val();
     localStorage.setItem("hour-9", JSON.stringify(hour9));
@@ -154,13 +157,6 @@ if ("17" === time) {
 
 
 //press button to save
-($(".container-lg").children().eq(0).children().eq(2)).on("click", run);
-($(".container-lg").children().eq(1).children().eq(2)).on("click", run);
-($(".container-lg").children().eq(3).children().eq(2)).on("click", run);
-($(".container-lg").children().eq(4).children().eq(2)).on("click", run);
-($(".container-lg").children().eq(5).children().eq(2)).on("click", run);
-($(".container-lg").children().eq(6).children().eq(2)).on("click", run);
-($(".container-lg").children().eq(7).children().eq(2)).on("click", run);
-($(".container-lg").children().eq(8).children().eq(2)).on("click", run);
+$("button").on("click", run);
 
 });
