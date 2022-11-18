@@ -1,42 +1,45 @@
 $(function () {
 
 //save to local storage
+for (var i = 9; i < 19; i++) {
+  var hour = i;
+}
 
-    var hour9Recall = JSON.parse(localStorage.getItem("hour-9"));
-    if (hour9Recall !== null) {
-      $("#hour-9").children().eq(1).append(hour9Recall);
+    var hour = JSON.parse(localStorage.getItem("hour-9"));
+    if (hour !== null) {
+      $("#hour-9").children().eq(1).append(hour);
     }
-    var hour10Recall = JSON.parse(localStorage.getItem("hour-10"));
-    if (hour10Recall !== null) {
-      $("#hour-10").children().eq(1).append(hour10Recall);
+    var hour = JSON.parse(localStorage.getItem("hour-10"));
+    if (hour !== null) {
+      $("#hour-10").children().eq(1).append(hour);
     }
-    var hour11Recall = JSON.parse(localStorage.getItem("hour-11"));
-    if (hour10Recall !== null) {
-      $("#hour-11").children().eq(1).append(hour11Recall);
+    var hour = JSON.parse(localStorage.getItem("hour-11"));
+    if (hour !== null) {
+      $("#hour-11").children().eq(1).append(hour);
     }
-    var hour12Recall = JSON.parse(localStorage.getItem("hour-12"));
-    if (hour12Recall !== null) {
-      $("#hour-12").children().eq(1).append(hour12Recall);
+    var hour = JSON.parse(localStorage.getItem("hour-12"));
+    if (hour !== null) {
+      $("#hour-12").children().eq(1).append(hour);
     }
-    var hour13Recall = JSON.parse(localStorage.getItem("hour-13"));
-    if (hour13Recall !== null) {
-      $("#hour-13").children().eq(1).append(hour13Recall);
+    var hour = JSON.parse(localStorage.getItem("hour-13"));
+    if (hour !== null) {
+      $("#hour-13").children().eq(1).append(hour);
     }
-    var hour14Recall = JSON.parse(localStorage.getItem("hour-14"));
-    if (hour14Recall !== null) {
-      $("#hour-14").children().eq(1).append(hour14Recall);
+    var hour = JSON.parse(localStorage.getItem("hour-14"));
+    if (hour !== null) {
+      $("#hour-14").children().eq(1).append(hour);
     }
-    var hour15Recall = JSON.parse(localStorage.getItem("hour-15"));
-    if (hour14Recall !== null) {
-      $("#hour-15").children().eq(1).append(hour15Recall);
+    var hour = JSON.parse(localStorage.getItem("hour-15"));
+    if (hour !== null) {
+      $("#hour-15").children().eq(1).append(hour);
     }
-    var hour16Recall = JSON.parse(localStorage.getItem("hour-16"));
-    if (hour16Recall !== null) {
-      $("#hour-16").children().eq(1).append(hour16Recall);
+    var hour = JSON.parse(localStorage.getItem("hour-16"));
+    if (hour !== null) {
+      $("#hour-16").children().eq(1).append(hour);
     }
-    var hour17Recall = JSON.parse(localStorage.getItem("hour-17"));
-    if (hour17Recall !== null) {
-      $("#hour-17").children().eq(1).append(hour17Recall);
+    var hour = JSON.parse(localStorage.getItem("hour-17"));
+    if (hour !== null) {
+      $("#hour-17").children().eq(1).append(hour);
     }
 
   
@@ -44,33 +47,15 @@ $(function () {
 
 
   function run() {
-    var hour9 = $("#hour-9").children().eq(1).val();
-    localStorage.setItem("hour-9", JSON.stringify(hour9));
-
-    var hour10 = $("#hour-10").children().eq(1).val();
-    localStorage.setItem("hour-10", JSON.stringify(hour10));
-
-    var hour11 = $("#hour-11").children().eq(1).val();
-    localStorage.setItem("hour-11", JSON.stringify(hour11));
-
-    var hour12 = $("#hour-12").children().eq(1).val();
-    localStorage.setItem("hour-12", JSON.stringify(hour12));
-
-    var hour13 = $("#hour-13").children().eq(1).val();
-    localStorage.setItem("hour-13", JSON.stringify(hour13));
-
-    var hour14 = $("#hour-14").children().eq(1).val();
-    localStorage.setItem("hour-14", JSON.stringify(hour14));
-
-    var hour15 = $("#hour-15").children().eq(1).val();
-    localStorage.setItem("hour-15", JSON.stringify(hour15));
-    
-    var hour16 = $("#hour-16").children().eq(1).val();
-    localStorage.setItem("hour-16", JSON.stringify(hour16));
-
-    var hour17 = $("#hour-17").children().eq(1).val();
-    localStorage.setItem("hour-17", JSON.stringify(hour17));
-  
+  localStorage.setItem("hour-9", JSON.stringify($("#hour-9").children().eq(1).val()));
+  localStorage.setItem("hour-10", JSON.stringify($("#hour-10").children().eq(1).val()));
+  localStorage.setItem("hour-11", JSON.stringify($("#hour-11").children().eq(1).val()));
+  localStorage.setItem("hour-12", JSON.stringify($("#hour-12").children().eq(1).val()));
+  localStorage.setItem("hour-13", JSON.stringify($("#hour-13").children().eq(1).val()));
+  localStorage.setItem("hour-14", JSON.stringify($("#hour-14").children().eq(1).val()));
+  localStorage.setItem("hour-15", JSON.stringify($("#hour-15").children().eq(1).val()));
+  localStorage.setItem("hour-16", JSON.stringify($("#hour-16").children().eq(1).val()));
+  localStorage.setItem("hour-17", JSON.stringify($("#hour-17").children().eq(1).val()));
   }
   
 //display date in index
