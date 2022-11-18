@@ -45,7 +45,6 @@ for (var i = 9; i < 19; i++) {
   
   //pull entries from local storage and display in index
 
-
   function run() {
   localStorage.setItem("hour-9", JSON.stringify($("#hour-9").children().eq(1).val()));
   localStorage.setItem("hour-10", JSON.stringify($("#hour-10").children().eq(1).val()));
@@ -63,80 +62,82 @@ var date = dayjs();
 $("#currentDay").text(date.format("dddd, MMMM, D"));
 
 //set current hour
-var time = JSON.stringify(dayjs().hour());
-console.log(time);
+var time = (dayjs().hour());
+// var time = JSON.stringify(dayjs().hour());
+console.log("current hour " + time);
 
 //determine which class (past, present, future) class to add based on if the current hour matches the hour in the index
 
-if ("9" === time) {
+
+if (9 === time) {
   $("#hour-9").addClass("present")
-} else if ("9" < time) {
+} else if (9 < time) {
   $("#hour-9").addClass("past")
-} else if ("9" > time) {
+} else if (9> time) {
   $("#hour-9").addClass("future")
 };
 
-if ("10" === time) {
+if (10 === time) {
   $("#hour-10").addClass("present")
-} else if ("10" < time) {
+} else if (10 < time) {
   $("#hour-10").addClass("past")
-} else if ("10" > time) {
+} else if (10 > time) {
   $("#hour-10").addClass("future")
 };
 
-if ("11" === time) {
+if (11 === time) {
   $("#hour-11").addClass("present")
-} else if ("11" < time) {
+} else if (11 < time) {
   $("#hour-11").addClass("past")
-} else if ("11" > time) {
+} else if (11 > time) {
   $("#hour-11").addClass("future")
 };
 
-if ("12" === time) {
+if (12 === time) {
   $("#hour-12").addClass("present")
-} else if ("12" < time) {
+} else if (12 < time) {
   $("#hour-12").addClass("past")
-} else if ("12" > time) {
+} else if (12 > time) {
   $("#hour-12").addClass("future")
 };
 
-if ("13" === time) {
+if (13 === time) {
   $("#hour-13").addClass("present")
-} else if ("13" < time) {
+} else if (13 < time) {
   $("#hour-13").addClass("past")
-} else if ("13" > time) {
+} else if (13 > time) {
   $("#hour-13").addClass("future")
 };
 
-if ("14" === time) {
+if (14 === time) {
   $("#hour-14").addClass("present")
-} else if ("14" < time) {
+} else if (14 < time) {
   $("#hour-14").addClass("past")
-} else if ("14" > time) {
+} else if (14 > time) {
   $("#hour-14").addClass("future")
 };
 
-if ("15" === time) {
+if (15 === time) {
   $("#hour-15").addClass("present")
-} else if ("15" < time) {
+} else if (15 < time) {
   $("#hour-15").addClass("past")
-} else if ("15" > time) {
+} else if (15 > time) {
   $("#hour-15").addClass("future")
 };
 
-if ("16" === time) {
+if (16 === time) {
   $("#hour-16").addClass("present")
-} else if ("16" < time) {
+} else if (16 < time) {
   $("#hour-16").addClass("past")
-} else if ("16" > time) {
+} else if (16 > time) {
   $("#hour-16").addClass("future")
 };
 
-if ("17" === time) {
+if (17 === time) {
   $("#hour-17").addClass("present")
-} else if ("17" < time) {
+} else if (17 < time) {
   $("#hour-17").addClass("past")
-} else if ("17" > time) {
+} else if (17 > time) {
   $("#hour-17").addClass("future")
 };
 
